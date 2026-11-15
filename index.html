@@ -67,45 +67,48 @@ textarea{resize:none;height:80px}.row{display:flex;gap:8px;flex-wrap:wrap;margin
 .li{display:flex;gap:12px;align-items:center;padding:10px;border-radius:14px;background:var(--glass);margin-bottom:8px}.li .av{width:42px;height:42px;font-size:16px;border:0}.li>div:nth-child(2){flex:1;min-width:0}.li small{display:block;color:var(--mut)}
 .sh3{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.8px;margin:18px 0 6px;font-weight:700}
 
-/* Profil */
+/* Profil im TikTok-Look */
 #mp{padding-bottom:24px}
-.pban{height:145px;position:relative;background:linear-gradient(135deg,#3b1259,#8e2de2 45%,#fe2c55);background-size:cover;background-position:center;display:flex;align-items:flex-start;gap:8px;padding:calc(12px + env(safe-area-inset-top,0px)) 14px 0}
-.pban::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,var(--bg));pointer-events:none}
-.rb{position:relative;z-index:2;width:36px;height:36px;border-radius:50%;background:#0006;backdrop-filter:blur(10px);border:1px solid #ffffff22;display:grid;place-items:center;color:#fff}
+.pban{height:145px;position:relative;background:linear-gradient(135deg,#3b1259,#8e2de2 45%,#fe2c55);background-size:cover;background-position:center;display:flex;align-items:flex-start;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top,0px)) 14px 0}
+.pban::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,var(--bg));pointer-events:none}
+.top-actions{display:flex;gap:10px;position:relative;z-index:2}
+.rb{width:36px;height:36px;border-radius:50%;background:#0006;backdrop-filter:blur(10px);border:1px solid #ffffff22;display:grid;place-items:center;color:#fff;cursor:pointer}
 .rb svg{width:18px;height:18px;fill:currentColor}
-.pmain{display:flex;justify-content:space-between;align-items:flex-start;padding:0 16px;position:relative;z-index:2}
-.pname{font-size:22px;font-weight:800;margin-top:6px;line-height:1.15;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
-.pname small{font-size:13px;opacity:.6;font-weight:500;display:block;width:100%;margin-top:2px}
-.stats.l{display:flex;justify-content:flex-start;background:none;padding:0;gap:22px;text-align:left;margin:10px 0 0;font-size:13px;color:var(--mut)}
-.stats.l>div{cursor:pointer}.stats.l b{display:block;font-size:17px;font-weight:800;color:var(--fg)}
-.pavw{position:relative;margin-top:-36px;flex:none}
-.pav{position:relative;width:88px;height:88px;border-radius:50%;padding:3px;background:var(--line);cursor:pointer}
-.pav .av{width:100%;height:100%;font-size:34px;border:3px solid var(--bg)}
-.pbody{padding:8px 16px 4px}
-.pbio{font-size:14px;line-height:1.4;white-space:pre-line;margin-bottom:8px}
-.pills{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 4px}
-.pill{display:inline-flex;gap:6px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 11px;font-size:13px;font-weight:600;color:var(--fg)}
-.ptabs{display:flex;border-bottom:1px solid var(--line);margin:6px 0 2px}
-.ptabs button{flex:1;background:none;border:0;padding:10px 4px;opacity:.45;border-bottom:2px solid transparent;display:flex;align-items:center;justify-content:center;gap:3px}
-.ptabs button svg{width:21px;height:21px;fill:currentColor}
-.ptabs button.on{opacity:1;border-color:var(--fg)}
+
+.p-header-section{text-align:center;position:relative;z-index:2;margin-top:-35px;padding:0 16px}
+.pav-big{width:96px;height:96px;border-radius:50%;margin:0 auto 10px;border:3px solid var(--bg);position:relative;background:#222;overflow:hidden;cursor:pointer}
+.pav-big img{width:100%;height:100%;object-fit:cover}
+.pav-big .badge-plus{position:absolute;right:2px;bottom:2px;width:24px;height:24px;background:var(--acc);border-radius:50%;color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px;border:2px solid var(--bg)}
+
+.pname-main{font-size:20px;font-weight:800;margin-bottom:2px}
+.phandle{font-size:14px;color:var(--mut);margin-bottom:12px}
+
+.stats-row{display:flex;justify-content:center;gap:24px;margin-bottom:14px;font-size:14px;color:var(--mut)}
+.stats-row div{text-align:center;cursor:pointer}
+.stats-row b{display:block;font-size:17px;font-weight:800;color:var(--fg)}
+
+.profile-actions{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
+.profile-actions button{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 20px;font-weight:600;font-size:14px}
+.profile-actions button.primary{background:var(--acc);border:0;color:#fff}
+
+.p-bio{font-size:13px;line-height:1.4;margin-bottom:6px;white-space:pre-line}
+.p-web{color:var(--cy);font-weight:600;font-size:13px;text-decoration:none;display:inline-block;margin-bottom:14px}
+
+.ptabs-bar{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:10px}
+.ptabs-bar button{flex:1;background:none;border:0;padding:10px 0;opacity:.4;display:flex;justify-content:center;align-items:center;border-bottom:2px solid transparent}
+.ptabs-bar button svg{width:22px;height:22px;fill:currentColor}
+.ptabs-bar button.on{opacity:1;border-color:var(--fg)}
 
 /* Sheets & Splash */
 #ov{position:absolute;inset:0;z-index:100;display:none;background:#0008;backdrop-filter:blur(4px);align-items:flex-end}#ov.on{display:flex}
 #sh{width:100%;max-height:86%;overflow-y:auto;background:#141418;border-radius:20px 20px 0 0;padding:18px;animation:up .2s ease-out;z-index:101}
 @keyframes up{from{transform:translateY(100%)}}
-#sh.full{height:100%;max-height:100%;border-radius:0;padding-top:calc(16px + env(safe-area-inset-top,0px))}
-.msg{max-width:80%;padding:8px 12px;border-radius:16px;margin:6px 0;background:var(--panel)}.msg.me{margin-left:auto;background:var(--acc);color:#fff}
 #toast{position:absolute;left:50%;top:70px;transform:translateX(-50%);background:#fff;color:#000;padding:8px 16px;border-radius:99px;font-weight:600;opacity:0;pointer-events:none;z-index:200;transition:.2s}#toast.on{opacity:1}
 #splash{position:absolute;inset:0;z-index:150;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:radial-gradient(circle at 50% 30%,#3b1250,#07070a 70%);text-align:center;padding:30px;color:#fff}
 #splash p{color:#ffffff9e;margin:0 0 10px}#splash .btn{font-size:17px;padding:13px 30px}
 .lg.big{height:125px;width:auto;filter:drop-shadow(0 0 34px #9b27b0aa)}
 .gbtn{background:#fff;color:#111;border:0;font-weight:700;display:flex;gap:10px;align-items:center;justify-content:center;width:270px;box-shadow:0 6px 20px #0005}.gbtn svg{width:20px;height:20px}
 #splash .btn.main{width:270px}
-body.light{color-scheme:light;--bg:#fff;--fg:#111113;--mut:#72727a;--panel:#f2f2f5;--line:#e5e5ea;--glass:#f4f4f7;background:radial-gradient(circle at 30% 20%,#f3e8ff,#e5e7eb 70%);color:var(--fg)}
-body.light #app{background:#fff;border-color:#d1d1d6}
-body.light nav{background:#fffffff5;color:#111113;border-top:1px solid #e5e5ea}
-body.light #sh{background:#fff;color:#111113}
 </style></head>
 <body>
 <div id="app">
@@ -166,11 +169,10 @@ body.light #sh{background:#fff;color:#111113}
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getAuth, signInWithRedirect, GoogleAuthProvider, getRedirectResult, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
 
-// Deine echte Firebase Config:
 const firebaseConfig = {
   apiKey: "AIzaSyCAdlZys-UbFqGppbpPW5y3kBtWzq4_CZw",
   authDomain: "loopapp-51081.firebaseapp.com",
@@ -193,7 +195,7 @@ try {
 } catch (e) { console.error("Firebase Init Error:", e); }
 
 const S = {
-  uid: null, name: "Gast", user: "@gast", bio: "Willkommen auf Loop ✨", av: "",
+  uid: null, name: "Gast", user: "@gast", bio: "Willkommen auf Loop ✨\nDeine kurze Bühne für Videos.", website: "https://liebigpaul-star.github.io/Loop/", av: "",
   fol: ["@lena.dance"], likes: {}, saves: {}, coms: {},
   cloudVideos: [], tab: "y", muted: true, light: false
 };
@@ -233,21 +235,25 @@ function allVideos() {
   return [...S.cloudVideos, ...DEFAULT_VIDEOS];
 }
 
+if (firebaseReady) {
+  getRedirectResult(auth).then(async (res) => {
+    if (res) {
+      const u = res.user;
+      S.uid = u.uid;
+      S.name = u.displayName || "Loop User";
+      S.user = "@" + (u.email.split("@")[0]).toLowerCase();
+      S.av = u.photoURL || "";
+      $("#splash").style.display = "none";
+      toast("Willkommen, " + S.name + "! 🎉");
+      await loadCloudVideos();
+      renderFeed();
+    }
+  }).catch((err) => { toast("Login-Fehler: " + err.message); });
+}
+
 $("#gsign").onclick = async () => {
-  try {
-    const res = await signInWithPopup(auth, provider);
-    const u = res.user;
-    S.uid = u.uid;
-    S.name = u.displayName || "Loop User";
-    S.user = "@" + (u.email.split("@")[0]).toLowerCase();
-    S.av = u.photoURL || "";
-    $("#splash").style.display = "none";
-    toast("Willkommen, " + S.name + "! 🎉");
-    await loadCloudVideos();
-    renderFeed();
-  } catch (err) {
-    toast("Login fehlgeschlagen: " + err.message);
-  }
+  if (!firebaseReady) { toast("Firebase nicht bereit!"); return; }
+  try { await signInWithRedirect(auth, provider); } catch (err) { toast("Login fehlgeschlagen: " + err.message); }
 };
 
 $("#go").onclick = async () => {
@@ -359,10 +365,7 @@ document.addEventListener("click", e => {
 });
 
 function openCreator() {
-  if (!S.uid) {
-    toast("Bitte melde dich zuerst mit Google an, um Videos hochzuladen!");
-    return;
-  }
+  if (!S.uid) { toast("Bitte melde dich zuerst mit Google an, um Videos hochzuladen!"); return; }
   openSheet(`<h3>Neues Video in die Cloud posten</h3>
     <button class="btn" id="pickVid" style="width:100%;margin-bottom:10px">🎬 MP4-Video auswählen</button>
     <input type="file" id="vf" accept="video/mp4,video/quicktime" hidden>
@@ -405,38 +408,86 @@ function openCreator() {
 function renderProfile() {
   const myVids = allVideos().filter(v => v.u === S.user);
   const shareUrl = window.location.origin + window.location.pathname + "?user=" + encodeURIComponent(S.user);
+  
   $("#mp").innerHTML = `
     <div class="pban">
-      <div style="flex:1"></div>
-      ${S.uid ? `<button class="btn" id="bLogout" style="z-index:2;font-size:12px">Abmelden</button>` : ""}
-    </div>
-    <div class="pmain">
-      <div>
-        <div class="pname">${S.name}<small>${S.user}</small></div>
-        <div class="stats l">
-          <div><b>${S.fol.length}</b>Folge ich</div>
-          <div><b>${myVids.length}</b>Videos</div>
-        </div>
+      <div class="top-actions">
+        <div class="rb" id="bEditProf" title="Profil bearbeiten">✏️</div>
       </div>
-      <div class="pavw"><div class="pav"><div class="av" style="background:var(--grad)">${S.av?`<img src="${S.av}">`:`<span>${S.name[0].toUpperCase()}</span>`}</div></div></div>
-    </div>
-    <div class="pbody">
-      <div class="pbio">${S.bio}</div>
-      <div class="pills">
-        <button class="pill" id="bShareProf">🔗 Profil-Link teilen</button>
+      <div class="top-actions">
+        ${S.uid ? `<div class="rb" id="bLogout" title="Abmelden">🚪</div>` : ""}
       </div>
     </div>
-    <div class="grid">${myVids.map(v=>`<div class="tile"><video src="${v.src}" muted playsinline preload="metadata"></video><span>▷ ${fmt(v.lk||1)}</span></div>`).join("")}</div>
+    
+    <div class="p-header-section">
+      <div class="pav-big" id="changeAvatar">
+        ${S.av ? `<img src="${S.av}">` : `<div style="display:grid;place-items:center;height:100%;font-size:36px;font-weight:800">${S.name[0].toUpperCase()}</div>`}
+        <div class="badge-plus">+</div>
+      </div>
+      <div class="pname-main">${S.name}</div>
+      <div class="phandle">${S.user}</div>
+
+      <div class="stats-row">
+        <div><b>${S.fol.length}</b>Following</div>
+        <div><b>${myVids.length * 248}</b>Followers</div>
+        <div><b>${myVids.reduce((a,b)=>a+(b.lk||1), 0)}</b>Likes</div>
+      </div>
+
+      <div class="profile-actions">
+        <button class="primary" id="bShareProf">Profil teilen</button>
+        <button id="bAddLink">Webseite hinzufügen</button>
+      </div>
+
+      <div class="p-bio">${S.bio}</div>
+      ${S.website ? `<a class="p-web" href="${S.website}" target="_blank">🔗 ${S.website}</a>` : ""}
+    </div>
+
+    <div class="ptabs-bar">
+      <button class="on"><svg viewBox="0 0 24 24"><path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/></svg></button>
+      <button><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+      <button><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg></button>
+    </div>
+
+    <div class="grid" style="margin-top:2px">${myVids.map(v=>`<div class="tile"><video src="${v.src}" muted playsinline preload="metadata"></video><span>▷ ${fmt(v.lk||1)}</span></div>`).join("")}</div>
   `;
+
   $("#bShareProf").onclick = () => {
     navigator.clipboard?.writeText(shareUrl);
-    toast("Link kopiert: " + shareUrl);
+    toast("Profil-Link kopiert! 🔗");
   };
-  if ($("#bLogout")) {
-    $("#bLogout").onclick = async () => {
-      await signOut(auth);
-      location.reload();
+
+  $("#bEditProf").onclick = () => {
+    openSheet(`<h3>Profil bearbeiten</h3>
+      <label class="hint">Name</label>
+      <input type="text" id="eName" value="${S.name}">
+      <label class="hint">Bio</label>
+      <textarea id="eBio">${S.bio}</textarea>
+      <button class="btn main" id="saveProf" style="width:100%;margin-top:10px">Speichern</button>
+    `);
+    $("#saveProf").onclick = () => {
+      S.name = $("#eName").value || S.name;
+      S.bio = $("#eBio").value;
+      closeSheet();
+      renderProfile();
+      toast("Profil aktualisiert! ✨");
     };
+  };
+
+  $("#bAddLink").onclick = () => {
+    openSheet(`<h3>Webseite verlinken</h3>
+      <input type="text" id="eWeb" value="${S.website || ''}" placeholder="https://deine-website.de">
+      <button class="btn main" id="saveWeb" style="width:100%;margin-top:10px">Link setzen</button>
+    `);
+    $("#saveWeb").onclick = () => {
+      S.website = $("#eWeb").value;
+      closeSheet();
+      renderProfile();
+      toast("Webseite aktualisiert! 🔗");
+    };
+  };
+
+  if ($("#bLogout")) {
+    $("#bLogout").onclick = async () => { await signOut(auth); location.reload(); };
   }
 }
 
